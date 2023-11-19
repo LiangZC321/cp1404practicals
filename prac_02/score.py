@@ -4,6 +4,11 @@ excellent_score = 90
 passable_score = 50
 
 def main():
+    import random
+
+    score = random.randint(0, 100)
+    result = evaluate_score(score)
+    print(result)
     score = float(input("Enter score: "))
     result = evaluate_score(score)
     print(result)
@@ -20,5 +25,7 @@ def evaluate_score(score):
         else:
             result = "Bad"
         return result
+
+main()
 
 
