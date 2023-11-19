@@ -1,21 +1,24 @@
 min_score = 0
 max_score = 100
-import random
-
-def generate_random_score(min_score, max_score):
-    return random.randint(min_score, max_score)
-random_score = generate_random_score(min_score, max_score)
-
+excellent_score = 90
+passable_score = 50
 
 def main():
     score = float(input("Enter score: "))
-    if score < 0 or score > 100:
-        print("Invalid score")
+    result = evaluate_score(score)
+    print(result)
+
+
+def evaluate_score(score):
+    if score < min_score or score > max_score:
+        result = "Invalid score"
     else:
-        if score >= 90:
-            return "Excellent"
-        elif score >= 50:
-            return "Passable"
+        if score >= excellent_score:
+            result = "Excellent"
+        elif score >= passable_score:
+            result = "Passable"
         else:
-            return "Bad"
+            result = "Bad"
+        return result
+
 
