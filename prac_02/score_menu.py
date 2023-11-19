@@ -28,7 +28,7 @@ def main():
     choice = input("Enter your choice: ").lower()
     while choice != "q":
         if choice == "g":
-            score = float(input("Enter score:(0-100):"))
+            score = int(input("Enter score:(0-100):"))
         elif choice == "p":
             result = evaluate_score(score)
             print(result)
