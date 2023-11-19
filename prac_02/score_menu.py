@@ -28,20 +28,21 @@ def main():
     choice = input("Enter your choice: ").lower()
     while choice != "q":
         if choice == "g":
-            score = float(input("Enter score:(0-100)"))
-            return score
+            score = float(input("Enter score:(0-100):"))
         elif choice == "p":
             result = evaluate_score(score)
+            print(result)
         elif choice == "s":
             print("*" * score)
         else:
             print("invalid choice")
-            display_menu()
-            choice = input("Enter your choice: ").lower()
+        display_menu()
+        choice = input("Enter your choice: ").lower()
     print("farewell")
 
 def display_menu():
     print("(G)et a valid score")
+    print("(P)rint result")
     print("(S)how stars")
     print("(Q)uit")
 
@@ -56,6 +57,8 @@ def evaluate_score(score):
         else:
             result = "Bad"
         return result
+
+main()
 
 
 
