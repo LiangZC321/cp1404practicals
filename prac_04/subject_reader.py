@@ -7,10 +7,8 @@ FILENAME = "subject_data.txt"
 
 
 def main():
-    data = get_data()
+    get_data()
     display_detail()
-
-    print(data)
 
 
 
