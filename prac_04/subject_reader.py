@@ -8,6 +8,8 @@ FILENAME = "subject_data.txt"
 
 def main():
     data = get_data()
+    display_detail()
+
     print(data)
 
 
@@ -26,6 +28,16 @@ def get_data():
         nested_parts.append(parts)
         print(nested_parts)  # See if that worked
         print("----------")
+
+
+    input_file.close()
+
+def display_detail():
+    input_file = open(FILENAME)
+    for line in input_file:
+        parts = line.split(',')
+        print(f"{parts[0]} is taught by {parts[1]} and has {parts[2]} students")
+
     input_file.close()
 
 
