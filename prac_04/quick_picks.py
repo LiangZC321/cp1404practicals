@@ -9,10 +9,8 @@ def generate_quick_pick():
 def main():
     # user part
     num_quick_picks = int(input("How many quick picks? "))
-
     for i in range(1, num_quick_picks + 1):
         quick_pick = generate_quick_pick()
-        print(f"{i:2}", end=" ")
         for number in quick_pick:
             print(f"{number:2}", end=" ")
         print()
