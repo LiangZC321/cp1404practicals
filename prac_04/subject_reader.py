@@ -11,7 +11,9 @@ def main():
     print(data)
 
 
+
 def get_data():
+    nested_parts = []
     """Read data from file formatted like: subject,lecturer,number of students."""
     input_file = open(FILENAME)
     for line in input_file:
@@ -21,11 +23,11 @@ def get_data():
         parts = line.split(',')  # Separate the data into its parts
         print(parts)  # See what the parts look like (notice the integer is a string)
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
-        parts.append(parts)
-        print(parts)  # See if that worked
+        nested_parts.append(parts)
+        print(nested_parts)  # See if that worked
         print("----------")
     input_file.close()
-    return parts
+
 
 
 main()
