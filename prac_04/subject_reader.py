@@ -35,6 +35,7 @@ def get_data():
 def display_detail():
     input_file = open(FILENAME)
     for line in input_file:
+        line = line.strip()
         parts = line.split(',')
         print(f"{parts[0]} is taught by {parts[1]} and has {parts[2]} students")
 
