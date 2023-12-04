@@ -1,4 +1,4 @@
-from guitar import Guitar
+from prac_06.guitar import Guitar
 
 
 gibson_l5 = Guitar("Gibson L-5 CES", 1922, 16035.40)
