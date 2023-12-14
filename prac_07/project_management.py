@@ -45,9 +45,13 @@ def update_project(projects):
     for i, project in enumerate(projects):
         print(f"{i} {project}")
     choice = int(input("Project choice: "))
-    new_percentage = input("New Percentage: ")
-    new_priority = input("New Priority: ")
-    projects[choice].update(new_percentage, new_priority)
+    selected_project = projects[choice]
+    new_percentage = input(f"New Percentage: ")
+    new_percentage = new_percentage or selected_project.completion_percentage
+
+    new_priority = input(f"New Priority: ")
+    new_priority = new_priority or selected_project.priority
+    selected_project.update(int(new_percentage), int(new_priority))
 
 def main():
     filename = "projects.txt"
