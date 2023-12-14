@@ -12,9 +12,10 @@ def read_guitars(file_name):
 def main():
     file_name = 'guitars.csv'
     guitars = read_guitars(file_name)
+    sorted_guitars = sorted(guitars)
 
     print("These are my guitars:")
-    for guitar in guitars:
+    for guitar in sorted_guitars:
         print(guitar)
 
 main()
