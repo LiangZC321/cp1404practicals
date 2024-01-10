@@ -33,3 +33,18 @@ def main():
     print(f"Total trip cost: ${total_bill:.2f}")
     print("Taxis are now:")
     list_taxis(taxis)
+
+def list_taxis(taxis):
+        for i, taxi in enumerate(taxis):
+            print(f"{i} - {taxi}")
+
+def get_valid_input(prompt, max_index):
+        try:
+            choice = int(input(prompt))
+            if 0 <= choice < max_index:
+                return choice
+        except ValueError:
+            pass
+        print("Invalid taxi choice")
+        return None
+main()
