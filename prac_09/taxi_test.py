@@ -6,3 +6,8 @@ my_taxi.drive(40)
 
 print(my_taxi)
 print(f"Current fare: ${my_taxi.get_fare():.2f}")
+#2nd drive
+my_taxi.start_fare()
+my_taxi.drive(100)
+print(my_taxi)
+print(f"Current fare: ${my_taxi.get_fare():.2f}")
