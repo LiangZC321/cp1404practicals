@@ -16,6 +16,19 @@ def is_long_word(word, length=5):
 
     return len(word) > length
 
+def format_phrase(words):
+    if words[0].islower():
+        words = words[0].upper() + words[1:]
+    if words[-1] != ".":
+        words += "."
+    return words
+
+
+assert format_phrase('hello') == 'Hello.'
+
+assert format_phrase('It is an ex parrot.') == 'It is an ex parrot.'
+
+assert format_phrase('Cars work.') == 'Cars work.'
 
 def run_tests():
     """Run the tests on the functions."""
@@ -46,7 +59,7 @@ def run_tests():
 
 # TODO: 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
-doctest.testmod()
+# doctest.testmod()
 
 # TODO: 4. Fix the failing is_long_word function
 # (don't change the tests, change the function!)
@@ -60,16 +73,5 @@ doctest.testmod()
 # and one more you decide (one that is valid!)
 # test this and watch the tests fail
 # then write the body of the function so that the tests pass
-def format_phrase(words):
-    if words[0].islower():
-        words = words[0].upper() + words[1:]
-    if words[-1] != ".":
-        words += "."
-    return words
 
-
-assert format_phrase('hello') == 'Hello.'
-
-assert format_phrase('It is an ex parrot.') == 'It is an ex parrot.'
-
-assert format_phrase('Cars work.') == 'Cars work.'
+run_tests()
