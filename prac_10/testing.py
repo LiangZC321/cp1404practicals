@@ -45,21 +45,14 @@ def run_tests():
     # Note that Car's __init__ function sets the fuel in one of two ways:
     # using the value passed in or the default
     # You should test both of these
-    def test_car_fuel():
-        car_with_fuel = Car('WithFuel', 10)
-        assert car_with_fuel.fuel == 10, "Initial fuel not set correctly."
 
-        car_without_fuel = Car('WithoutFuel')
-        assert car_without_fuel.fuel == 0, "Default fuel should be 0."
+    car_with_fuel = Car('WithFuel', 10)
+    assert car_with_fuel.fuel == 10, "Initial fuel not set correctly."
 
-        print("All test cases passed for Car fuel property")
+    car_without_fuel = Car('WithoutFuel')
+    assert car_without_fuel.fuel == 0, "Default fuel should be 0."
 
 
-    test_car_fuel()
-
-
-
-run_tests()
 
 # TODO: 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
